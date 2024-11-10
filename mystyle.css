@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#shark, #diver1, #diver2, #fish1, #fish2, #turtle {
+    position: absolute;
+}
+
+#shark img {
+    width: auto;
+    height: 100px;
+}
+
+#diver1 img, #diver2 img, #fish1 img, #fish2 img, #turtle img {
+    width: auto;
+    height: 70px;
+}
+
+/* Hoạt ảnh cho cá mập */
+@keyframes Shark {
+    0% { left: 0px; top: 400px; }
+    20% { left: 300px; top: 200px; }
+    40% { left: 600px; top: 400px; }
+    60% { left: 900px; top: 200px; }
+    80% { left: 1200px; top: 400px; }
+    100% { left: 1500px; top: 200px; transform: scaleX(-1); }
+}
+
+#shark {
+    animation-name: Shark;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+/* Hoạt ảnh cho thợ lặn */
+@keyframes Diver {
+    0% { left: 50px; top: 300px; }
+    100% { left: 1200px; top: 300px; }
+}
+
+#diver1 {
+    animation: Diver 12s linear infinite;
+}
+
+#diver2 {
+    animation: Diver 15s linear infinite;
+}
+
+/* Hoạt ảnh cho cá */
+@keyframes Fish {
+    0% { left: 0px; top: 100px; }
+    100% { left: 1300px; top: 100px; }
+}
+
+#fish1 {
+    animation: Fish 8s linear infinite;
+}
+
+#fish2 {
+    animation: Fish 6s linear infinite;
+}
+
+/* Hoạt ảnh cho rùa */
+@keyframes Turtle {
+    0% { left: 0px; top: 500px; }
+    100% { left: 1000px; top: 500px; }
+}
+
+#turtle {
+    animation: Turtle 20s linear infinite;
+}
